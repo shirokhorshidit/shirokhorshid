@@ -166,7 +166,7 @@ function App() {
       },
       {
         root: null,
-        rootMargin: '-120px 0px -70% 0px',
+        rootMargin: '-140px 0px -70% 0px',
         threshold: [0.1, 0.2, 0.35, 0.5]
       }
     )
@@ -183,10 +183,15 @@ function App() {
   const scrollToSection = (id) => {
     const target = document.getElementById(id)
     if (!target) return
+
     const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0
-    const extraOffset = 8
-    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight - extraOffset
-    window.scrollTo({ top, behavior: 'smooth' })
+    const targetTop = window.scrollY + target.getBoundingClientRect().top
+    const top = targetTop - headerHeight
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    })
   }
 
   const handleNavClick = (event, id) => {
@@ -517,6 +522,18 @@ function App() {
 
         .hero {
           padding: 24px 0 22px;
+          scroll-margin-top: 130px;
+        }
+
+        .section {
+          padding: 20px 0;
+          scroll-margin-top: 130px;
+        }
+
+        .contact-section {
+          padding-top: 20px;
+          padding-bottom: 32px;
+          scroll-margin-top: 130px;
         }
 
         .hero-shell {
@@ -565,15 +582,15 @@ function App() {
           min-height: 720px;
           display: flex;
           align-items: flex-end;
-          padding: 48px;
+          padding: 0 48px 34px;
         }
 
         .hero-copy {
-          width: min(760px, 100%);
+          width: min(680px, 100%);
           text-align: left;
-          padding: 24px 28px;
-          border-radius: 28px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+          padding: 16px 20px;
+          border-radius: 24px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
           border: 1px solid rgba(255,255,255,0.14);
           backdrop-filter: blur(6px);
           box-shadow: 0 18px 40px rgba(0,0,0,0.08);
@@ -597,7 +614,7 @@ function App() {
           color: #fff;
           font-size: 14px;
           font-weight: 900;
-          margin-bottom: 18px;
+          margin-bottom: 10px;
           box-shadow: 0 8px 22px rgba(0,0,0,0.06);
         }
 
@@ -610,8 +627,20 @@ function App() {
           box-shadow: 0 0 14px rgba(199,154,55,0.72);
         }
 
+        .hero-badge-button {
+          cursor: pointer;
+        }
+
+        .hero-badge-button:hover {
+          background: rgba(255,255,255,0.16);
+        }
+
+        .hero-badge-button:focus {
+          outline: none;
+        }
+
         .hero-title {
-          margin: 0 0 14px;
+          margin: 0 0 8px;
           color: #fff;
           font-size: clamp(36px, 4.6vw, 66px);
           line-height: 1.06;
@@ -625,13 +654,9 @@ function App() {
           max-width: 680px;
           color: rgba(255,255,255,0.94);
           font-size: clamp(17px, 1.55vw, 21px);
-          line-height: 1.9;
+          line-height: 1.6;
           font-weight: 600;
           text-shadow: 0 4px 18px rgba(0,0,0,0.14);
-        }
-
-        .section {
-          padding: 20px 0;
         }
 
         .section-head {
@@ -813,11 +838,6 @@ function App() {
           line-height: 1.6;
           font-weight: 800;
           color: #0f172a;
-        }
-
-        .contact-section {
-          padding-top: 20px;
-          padding-bottom: 32px;
         }
 
         .contact-box {
@@ -1043,11 +1063,11 @@ function App() {
           }
 
           .hero-content {
-            padding: 24px;
+            padding: 0 24px 24px;
           }
 
           .hero-copy {
-            padding: 20px 22px;
+            padding: 16px 18px;
           }
 
           .hero-title {
@@ -1132,14 +1152,14 @@ function App() {
           }
 
           .hero-content {
-            padding: 18px;
+            padding: 0 18px 20px;
             align-items: flex-end;
           }
 
           .hero-copy {
             width: 100%;
-            padding: 16px 16px;
-            border-radius: 22px;
+            padding: 14px 14px;
+            border-radius: 20px;
           }
 
           .hero-title {
@@ -1148,7 +1168,7 @@ function App() {
 
           .hero-text {
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.7;
           }
 
           .hero-badge {
@@ -1259,7 +1279,13 @@ function App() {
 
                 <div className="hero-content">
                   <div className="hero-copy">
-                    <div className="hero-badge">{t.heroBadge}</div>
+                    <button
+                      type="button"
+                      className="hero-badge hero-badge-button"
+                      onClick={() => scrollToSection('statement')}
+                    >
+                      {t.heroBadge}
+                    </button>
                     <h2 className="hero-title">{t.heroTitle}</h2>
                     <p className="hero-text">{t.heroText}</p>
                   </div>
