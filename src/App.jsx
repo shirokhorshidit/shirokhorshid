@@ -347,9 +347,8 @@ function App() {
         .brand-logo img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: cover;
           display: block;
-          image-rendering: -webkit-optimize-contrast;
         }
 
         .brand-copy {
@@ -1018,8 +1017,10 @@ function App() {
           }
 
           .brand-logo {
-            width: 126px;
-            height: 126px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
           }
 
           .brand-title {
