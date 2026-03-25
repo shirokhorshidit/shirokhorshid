@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import logo from './assets/logo.png'
 import header from './assets/header.jpg'
+import xlogo from './assets/xlogo.png'
 
 const content = {
   fa: {
@@ -29,7 +30,7 @@ const content = {
     closingA: 'پاینده ایران',
     closingB: 'جاوید شاه',
     foundersTitle: 'بنیان‌گذاران جبهه شیر و خورشید ایتالیا',
-    foundersNote: 'اسامی به‌ترتیب حروف الفبای فارسی',
+    foundersNote: 'به‌ترتیب حروف الفبا',
     founders: [
       'آندره ماری رهبر',
       'آریا آذرمهر',
@@ -77,7 +78,7 @@ const content = {
     closingA: 'Long live Iran',
     closingB: 'Javid Shah',
     foundersTitle: 'Founders of the Lion and Sun Front Italy',
-    foundersNote: 'Names listed in alphabetical order',
+    foundersNote: 'Alphabetical order',
     founders: [
       'Amirsalar Khosravi',
       'André M. Rahbar',
@@ -120,17 +121,14 @@ function MailIcon() {
   )
 }
 
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="icon-svg x-icon-fixed" fill="currentColor">
-      <path d="M18.244 2H21l-6.018 6.876L22 22h-5.49l-4.301-6.303L6.69 22H3.93l6.438-7.36L2 2h5.63l3.888 5.748L18.244 2Zm-.967 18.24h1.523L6.802 3.68H5.168L17.277 20.24Z" />
-    </svg>
-  )
+function XIconImage() {
+  return <img src={xlogo} alt="X" className="x-logo-image" />
 }
 
 function App() {
   const [lang, setLang] = useState('fa')
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
   const langRef = useRef(null)
   const headerRef = useRef(null)
   const t = content[lang]
@@ -149,6 +147,32 @@ function App() {
 
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  useEffect(() => {
+    const sections = ['home', 'statement', 'founders', 'contact']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visible[0]?.target?.id) {
+          setActiveSection(visible[0].target.id)
+        }
+      },
+      {
+        root: null,
+        rootMargin: '-20% 0px -55% 0px',
+        threshold: [0.15, 0.3, 0.5, 0.7]
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
   }, [])
 
   const switchLanguage = (nextLang) => {
@@ -172,14 +196,14 @@ function App() {
   return (
     <div className={`site-root ${lang === 'fa' ? 'rtl' : 'ltr'}`}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Estedad:wght@400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
 
         :root {
           color-scheme: light;
           --bg-1: #08121f;
           --bg-2: #0d1c32;
           --bg-3: #edf3fb;
-          --surface: rgba(255, 255, 255, 0.78);
+          --surface: rgba(255, 255, 255, 0.80);
           --surface-strong: rgba(255, 255, 255, 0.94);
           --border: rgba(148, 163, 184, 0.16);
           --text: #0f172a;
@@ -187,7 +211,9 @@ function App() {
           --muted-2: #64748b;
           --navy: #08172d;
           --navy-2: #0f2d56;
+          --navy-3: #163f76;
           --gold: #c79a37;
+          --gold-2: #e8c56e;
           --shadow-xl: 0 30px 80px rgba(2, 12, 27, 0.16);
           --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.10);
           --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
@@ -271,7 +297,7 @@ function App() {
         .site-root.rtl .section-kicker,
         .site-root.rtl .founders-grid-title,
         .site-root.rtl .founders-note {
-          font-family: Estedad, Tahoma, sans-serif;
+          font-family: "Noto Naskh Arabic", Tahoma, serif;
         }
 
         .page-layer {
@@ -288,7 +314,7 @@ function App() {
           position: sticky;
           top: 0;
           z-index: 90;
-          background: rgba(255, 255, 255, 0.74);
+          background: rgba(255, 255, 255, 0.76);
           backdrop-filter: blur(18px) saturate(180%);
           border-bottom: 1px solid rgba(255, 255, 255, 0.72);
           box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
@@ -305,7 +331,7 @@ function App() {
         }
 
         .topbar-inner {
-          min-height: 110px;
+          min-height: 118px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -316,30 +342,39 @@ function App() {
         .brand-wrap {
           display: flex;
           align-items: center;
-          gap: 20px;
+          gap: 18px;
           min-width: 0;
+          flex: 1 1 auto;
         }
 
         .brand-logo {
-          width: 136px;
-          height: 136px;
+          width: 152px;
+          height: 152px;
           border-radius: 30px;
           overflow: hidden;
-          background: rgba(255,255,255,0.96);
+          background: rgba(255,255,255,0.98);
           box-shadow: 0 20px 42px rgba(15,23,42,0.12);
           border: 1px solid rgba(255,255,255,0.88);
           flex: 0 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
         }
 
         .brand-logo img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
+          image-rendering: -webkit-optimize-contrast;
         }
 
         .brand-copy {
           min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .brand-top {
@@ -354,8 +389,8 @@ function App() {
 
         .brand-title {
           margin: 0;
-          font-size: clamp(24px, 2.25vw, 34px);
-          line-height: 1.04;
+          font-size: clamp(20px, 1.85vw, 28px);
+          line-height: 1.06;
           font-weight: 900;
           color: #071223;
           white-space: nowrap;
@@ -366,6 +401,7 @@ function App() {
           align-items: center;
           gap: 14px;
           flex-wrap: nowrap;
+          flex: 0 0 auto;
         }
 
         .nav-links {
@@ -399,18 +435,25 @@ function App() {
           color: #08172d;
         }
 
+        .nav-link.active-nav {
+          background: linear-gradient(135deg, #0b1d37 0%, #11335f 100%);
+          color: #ffffff;
+          box-shadow: 0 10px 24px rgba(8, 23, 45, 0.18);
+        }
+
         .lang-dropdown {
           position: relative;
         }
 
         .lang-button {
           border: 1px solid rgba(255,255,255,0.26);
-          background: linear-gradient(135deg, #08172d 0%, #0f2d56 68%, #153d70 100%);
+          background: linear-gradient(135deg, #0a203d 0%, #133c70 65%, #1a4b8a 100%);
           color: #fff;
           box-shadow: 0 16px 34px rgba(8, 23, 45, 0.22);
-          border-radius: 999px;
-          padding: 12px 17px;
-          min-width: 136px;
+          border-radius: 18px;
+          padding: 12px 16px;
+          min-width: 132px;
+          height: 52px;
           display: inline-flex;
           align-items: center;
           justify-content: space-between;
@@ -418,12 +461,13 @@ function App() {
           font-size: 15px;
           font-weight: 900;
           cursor: pointer;
-          transition: transform 180ms ease, box-shadow 180ms ease;
+          transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
         }
 
         .lang-button:hover {
           transform: translateY(-1px);
           box-shadow: 0 20px 40px rgba(8, 23, 45, 0.28);
+          background: linear-gradient(135deg, #0c2647 0%, #15457f 65%, #20579d 100%);
         }
 
         .lang-caret {
@@ -444,19 +488,22 @@ function App() {
 
         .lang-menu {
           position: absolute;
-          top: calc(100% + 12px);
+          top: calc(100% + 10px);
           right: 0;
-          min-width: 184px;
-          padding: 10px;
-          border-radius: 20px;
-          background: rgba(255,255,255,0.95);
+          min-width: 100%;
+          width: max-content;
+          max-width: 220px;
+          padding: 8px;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.97);
           border: 1px solid rgba(255,255,255,0.88);
-          box-shadow: 0 24px 50px rgba(15,23,42,0.14);
+          box-shadow: 0 22px 42px rgba(15,23,42,0.16);
           backdrop-filter: blur(18px);
           opacity: 0;
           visibility: hidden;
           transform: translateY(8px);
           transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+          overflow: hidden;
         }
 
         .ltr .lang-menu {
@@ -476,7 +523,7 @@ function App() {
           background: transparent;
           text-align: inherit;
           padding: 12px 14px;
-          border-radius: 14px;
+          border-radius: 12px;
           font-size: 15px;
           font-weight: 800;
           cursor: pointer;
@@ -518,11 +565,13 @@ function App() {
           object-position: center;
           display: block;
           transform: scale(1.01);
+          opacity: 0.93;
+          filter: saturate(1.02) contrast(1.01);
         }
 
         .hero-overlay {
           background:
-            linear-gradient(180deg, rgba(5,15,32,0.06) 0%, rgba(5,15,32,0.14) 38%, rgba(5,15,32,0.44) 100%);
+            linear-gradient(180deg, rgba(5,15,32,0.06) 0%, rgba(5,15,32,0.14) 38%, rgba(5,15,32,0.42) 100%);
         }
 
         .hero-glow {
@@ -541,8 +590,15 @@ function App() {
         }
 
         .hero-copy {
-          width: min(740px, 100%);
+          width: min(760px, 100%);
           text-align: left;
+          padding: 24px 28px;
+          border-radius: 28px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+          border: 1px solid rgba(255,255,255,0.22);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+          animation: floatCard 5.2s ease-in-out infinite;
         }
 
         .rtl .hero-copy {
@@ -556,8 +612,8 @@ function App() {
           gap: 10px;
           padding: 10px 16px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.12);
-          border: 1px solid rgba(255,255,255,0.16);
+          background: rgba(255,255,255,0.14);
+          border: 1px solid rgba(255,255,255,0.18);
           backdrop-filter: blur(8px);
           color: #fff;
           font-size: 14px;
@@ -572,6 +628,7 @@ function App() {
           height: 8px;
           border-radius: 999px;
           background: var(--gold);
+          box-shadow: 0 0 14px rgba(199,154,55,0.72);
         }
 
         .hero-title {
@@ -587,7 +644,7 @@ function App() {
         .hero-text {
           margin: 0;
           max-width: 680px;
-          color: rgba(255,255,255,0.9);
+          color: rgba(255,255,255,0.92);
           font-size: clamp(17px, 1.55vw, 21px);
           line-height: 1.9;
           font-weight: 600;
@@ -887,6 +944,7 @@ function App() {
           justify-content: center;
           flex: 0 0 auto;
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
+          overflow: hidden;
         }
 
         .icon-mail {
@@ -900,8 +958,8 @@ function App() {
         }
 
         .icon-x {
-          background: #0f172a;
-          color: #ffffff;
+          background: #ffffff;
+          color: #111827;
         }
 
         .icon-svg {
@@ -918,8 +976,11 @@ function App() {
           fill: currentColor;
         }
 
-        .x-icon-fixed {
-          stroke: none;
+        .x-logo-image {
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
+          display: block;
         }
 
         .footer {
@@ -930,7 +991,21 @@ function App() {
           font-weight: 700;
         }
 
+        @keyframes floatCard {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+          100% { transform: translateY(0px); }
+        }
+
         @media (max-width: 1180px) {
+          .topbar-inner {
+            gap: 16px;
+          }
+
+          .brand-title {
+            font-size: 22px;
+          }
+
           .hero-shell,
           .hero-content {
             min-height: 650px;
@@ -953,7 +1028,7 @@ function App() {
 
         @media (max-width: 980px) {
           .topbar-inner {
-            min-height: 140px;
+            min-height: 150px;
             flex-direction: column;
             align-items: stretch;
             gap: 14px;
@@ -970,12 +1045,12 @@ function App() {
           }
 
           .brand-logo {
-            width: 116px;
-            height: 116px;
+            width: 126px;
+            height: 126px;
           }
 
           .brand-title {
-            font-size: 26px;
+            font-size: 24px;
             white-space: normal;
           }
 
@@ -990,6 +1065,10 @@ function App() {
 
           .hero-content {
             padding: 24px;
+          }
+
+          .hero-copy {
+            padding: 20px 22px;
           }
 
           .hero-title {
@@ -1012,7 +1091,7 @@ function App() {
           }
 
           .topbar-inner {
-            min-height: 168px;
+            min-height: 172px;
             padding: 10px 0 12px;
           }
 
@@ -1022,18 +1101,18 @@ function App() {
           }
 
           .brand-logo {
-            width: 94px;
-            height: 94px;
+            width: 104px;
+            height: 104px;
             border-radius: 24px;
           }
 
           .brand-top {
             font-size: 10px;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.16em;
           }
 
           .brand-title {
-            font-size: 22px;
+            font-size: 20px;
             white-space: normal;
           }
 
@@ -1052,7 +1131,7 @@ function App() {
           .nav-link {
             flex: 1 1 auto;
             font-size: 13px;
-            padding: 10px 10px;
+            padding: 10px 8px;
           }
 
           .lang-dropdown {
@@ -1061,13 +1140,16 @@ function App() {
 
           .lang-button {
             width: 100%;
+            min-width: 0;
           }
 
           .lang-menu,
           .ltr .lang-menu {
             left: 0;
             right: 0;
-            min-width: 100%;
+            width: 100%;
+            max-width: none;
+            min-width: 0;
           }
 
           .hero {
@@ -1083,6 +1165,12 @@ function App() {
           .hero-content {
             padding: 18px;
             align-items: flex-end;
+          }
+
+          .hero-copy {
+            width: 100%;
+            padding: 16px 16px;
+            border-radius: 22px;
           }
 
           .hero-title {
@@ -1152,10 +1240,10 @@ function App() {
 
             <div className="nav-group">
               <nav className="nav-links" aria-label="Main navigation">
-                <a className="nav-link" href="#home" onClick={(e) => handleNavClick(e, 'home')}>{t.navHome}</a>
-                <a className="nav-link" href="#statement" onClick={(e) => handleNavClick(e, 'statement')}>{t.navStatement}</a>
-                <a className="nav-link" href="#founders" onClick={(e) => handleNavClick(e, 'founders')}>{t.navFounders}</a>
-                <a className="nav-link" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>{t.navContact}</a>
+                <a className={`nav-link ${activeSection === 'home' ? 'active-nav' : ''}`} href="#home" onClick={(e) => handleNavClick(e, 'home')}>{t.navHome}</a>
+                <a className={`nav-link ${activeSection === 'statement' ? 'active-nav' : ''}`} href="#statement" onClick={(e) => handleNavClick(e, 'statement')}>{t.navStatement}</a>
+                <a className={`nav-link ${activeSection === 'founders' ? 'active-nav' : ''}`} href="#founders" onClick={(e) => handleNavClick(e, 'founders')}>{t.navFounders}</a>
+                <a className={`nav-link ${activeSection === 'contact' ? 'active-nav' : ''}`} href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>{t.navContact}</a>
               </nav>
 
               <div className="lang-dropdown" ref={langRef}>
@@ -1279,7 +1367,7 @@ function App() {
 
                   <a className="contact-pill" href="https://x.com/shirokhorshidit" target="_blank" rel="noreferrer" aria-label="X">
                     <span className="contact-pill-label">X</span>
-                    <span className="contact-icon-wrap icon-x"><XIcon /></span>
+                    <span className="contact-icon-wrap icon-x"><XIconImage /></span>
                   </a>
                 </div>
               </div>
