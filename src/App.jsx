@@ -43,7 +43,7 @@ const content = {
       'داریوش ناطقی',
       'زهره پاک زاد',
       'شاهین قدسی',
-      'شایان عباسیان (آزاد)',
+      'شایان عباسیان',
       'فریبا کریمی',
       'مریم پزشکی'
     ],
@@ -91,7 +91,7 @@ const content = {
       'Maryam Pezeshki',
       'Parniya Ghanati',
       'Shahin Ghodsi',
-      'Shayan Abbasian (Azad)',
+      'Shayan Abbasian',
       'Tooska Jahandideh',
       'Zohreh Pakzad'
     ],
@@ -1082,6 +1082,13 @@ function App() {
           .container {
             width: min(var(--container), calc(100% - 20px));
           }
+          .section {
+            margin-top: 40px;
+          }
+          
+          .contact-section {
+            margin-top: 40px;
+          }          
 
           .topbar-inner {
             min-height: 172px;
@@ -1136,7 +1143,7 @@ function App() {
           }
 
           .hero {
-            padding-top: 14px;
+            padding-top: 60px;
           }
 
           .hero-shell,
