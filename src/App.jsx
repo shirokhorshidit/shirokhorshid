@@ -339,6 +339,8 @@ function App() {
           width: 158px;
           height: 158px;
           flex: 0 0 auto;
+          border-radius: 50%;
+          overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
