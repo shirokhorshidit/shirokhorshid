@@ -3,10 +3,6 @@ import logo from './assets/logo.png'
 import header from './assets/header.jpg'
 import xlogo from './assets/xlogo.png'
 
-const statementRef = useRef(null)
-const foundersRef = useRef(null)
-const contactRef = useRef(null)
-
 const content = {
   fa: {
     dir: 'rtl',
@@ -136,6 +132,9 @@ function App() {
   const langRef = useRef(null)
   const headerRef = useRef(null)
   const t = content[lang]
+  const statementRef = useRef(null)
+  const foundersRef = useRef(null)
+  const contactRef = useRef(null)
 
   useEffect(() => {
     document.documentElement.lang = t.htmlLang
