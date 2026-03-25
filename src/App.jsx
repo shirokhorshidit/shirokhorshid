@@ -6,33 +6,33 @@ const content = {
   fa: {
     dir: 'rtl',
     htmlLang: 'fa',
-    brandTop: 'LION AND SUN FRONT ITALY',
-    brand: 'جبهه‌ی شیر و خورشید ایتالیا',
+    brandTop: '',
+    brand: 'جبهه شیر و خورشید ایتالیا',
     navHome: 'صفحه اصلی',
     navStatement: 'بیانیه',
     navFounders: 'بنیان‌گذاران',
     navContact: 'ارتباط',
     heroBadge: 'بیانیه اعلام موجودیت',
-    heroTitle: 'آغاز فعالیت جبهه‌ی شیر و خورشید ایتالیا',
-    heroText:
-      'سازمان‌دهی نیروهای ملی ایرانیان مقیم ایتالیا با تکیه بر آزادی، شفافیت، همبستگی و کنش جمعی.',
+    heroTitle: 'آغاز فعالیت جبهه شیر و خورشید ایتالیا',
+    heroText: 'گامی بلند در جهت سازمان‌دهی فعالیت‌های دیاسپورای ایرانیان در ایتالیا',
     statementTitle: 'بیانیه اعلام موجودیت',
     paragraphs: [
       'هم‌میهنان عزیز؛',
-      'ما، جمعی متکثر از فعالین سیاسی، دانشجویان و دانش‌آموختگان مقیم ایتالیا، با در نظر گرفتن شرایط خطیر و تاریخی میهنمان، بر آن شدیم تا با تشکیل «جبهه‌ شیر و خورشید ایتالیا»، گامی بلند در جهت سازمان‌دهی فعالیت‌های دیاسپورای ایرانیان در ایتالیا برداریم؛ و بدین‌وسیله آغاز فعالیت این جبهه را اعلام می‌نماییم.',
+      'ما، جمعی متکثر از فعالین سیاسی، دانشجویان و دانش‌آموختگان مقیم ایتالیا، با در نظر گرفتن شرایط خطیر و تاریخی میهنمان، بر آن شدیم تا با تشکیل «جبهه شیر و خورشید ایتالیا»، گامی بلند در جهت سازمان‌دهی فعالیت‌های دیاسپورای ایرانیان در ایتالیا برداریم؛ و بدین‌وسیله آغاز فعالیت این جبهه را اعلام می‌نماییم.',
       'تحولات اجتماعی و سیاسی ایران در سال‌های گذشته نشان داده است که نقش نیروهای ملی، آگاه و مسئول، به‌ویژه نسل جوان، در شکل‌گیری مسیر آینده کشور تعیین‌کننده بوده و خواهد بود. در چنین شرایطی، ضرورت ایجاد بستری منسجم برای همفکری و اقدام‌های موثر جمعی بیش از پیش احساس می‌شود.',
       'ما با تاکید بر نقش تاریخی و رهبری شاهزاده رضا پهلوی، تلاش خواهیم کرد تا با گردهم‌آوردن ایرانیان دغدغه‌مند در ایتالیا، زیر چتر فراگیر این سازمان، نقشی موثر در پیشبرد مطالبات آزادی‌خواهانه ملت ایران در این کشور ایفا کنیم.',
-      'فعالیت «جبهه‌ شیر و خورشید ایتالیا» که همزمان با نوروز ۲۵۸۵ شاهنشاهی و زادروز پیام‌آور مهر و هویت ایرانی، آشو زرتشت، اعلام موجودیت می‌کند، مبتنی بر چهار اصل خلل‌ناپذیر اعلامی از سوی شاهزاده رضا پهلوی است و این جبهه خود را بخشی از سازوکار همکاری ملی و پشتیبان «سامانه گذار» می‌داند.',
+      'فعالیت «جبهه شیر و خورشید ایتالیا» که همزمان با نوروز ۲۵۸۵ شاهنشاهی و زادروز پیام‌آور مهر و هویت ایرانی، آشو زرتشت، اعلام موجودیت می‌کند، مبتنی بر چهار اصل خلل‌ناپذیر اعلامی از سوی شاهزاده رضا پهلوی است و این جبهه خود را بخشی از سازوکار همکاری ملی و پشتیبان «سامانه گذار» می‌داند.',
       'ما خود را متعهد به اصول بنیادین ملی‌گرایی، پایبندی به کنش دموکراتیک، شفافیت و گفت‌وگو محوری میدانیم؛ و بر صداقت، پاسخ‌گویی، شایسته‌سالاری و پرهیز از هرگونه تبعیض و رفتار انحصارطلبانه تاکید داریم.',
       'در پایان، از تمامی ایرانیان مقیم ایتالیا - از کنشگران و دانشجویان، تا پژوهشگران و جوانان علاقه‌مند - صمیمانه دعوت می‌کنیم تا با پیوستن به جبهه شیر و خورشید، در مسیر ساختن آینده‌ای مبتنی بر آزادی، پیشرفت و اراده‌ی جمعی برای ایران عزیزمان، همراه شوند.',
       'به امید آنکه این آخرین تلاش ما برای سازماندهی نیروهای ملی در تبعید باشد و آزادی میهنمان، مسیر بازگشت تمام ایرانیان در تبعید را به سرزمین مادری فراهم سازد.'
     ],
     closingA: 'پاینده ایران',
     closingB: 'جاوید شاه',
-    foundersTitle: 'بنیان‌گذاران جبهه‌ شیر و خورشید ایتالیا',
+    foundersTitle: 'بنیان‌گذاران جبهه شیر و خورشید ایتالیا',
+    foundersNote: 'اسامی به‌ترتیب حروف الفبای فارسی',
     founders: [
       'آندره ماری رهبر',
-      'آريا آذرمهر',
+      'آریا آذرمهر',
       'آیسان احمدی',
       'امیرسالار خسروی',
       'بهنام صفایی',
@@ -41,14 +41,15 @@ const content = {
       'دارا کامیار',
       'داریوش ناطقی',
       'زهره پاک زاد',
-      'شایان عباسیان (آزاد)',
       'شاهین قدسی',
+      'شایان عباسیان (آزاد)',
       'فریبا کریمی',
       'مریم پزشکی'
     ],
     contactTitle: 'ارتباط با ما',
-    contactText: 'برای ارتباط رسانه‌ای، همکاری، عضویت و پیگیری فعالیت‌ها از راه‌های زیر با ما در تماس باشید.',
-    footer: '© 2026 جبهه‌ی شیر و خورشید ایتالیا'
+    contactText: 'برای ارتباط رسانه‌ای، همکاری و عضویت، از همین بخش با ما در تماس باشید.',
+    footer: '© 2026 جبهه شیر و خورشید ایتالیا',
+    langLabel: 'فارسی'
   },
   en: {
     dir: 'ltr',
@@ -61,15 +62,14 @@ const content = {
     navContact: 'Contact',
     heroBadge: 'Founding Statement',
     heroTitle: 'Launch of the Lion and Sun Front Italy',
-    heroText:
-      'Organizing national Iranian forces in Italy through freedom, transparency, solidarity, and collective action.',
+    heroText: 'A major step toward organizing the activities of the Iranian diaspora in Italy',
     statementTitle: 'Founding Statement',
     paragraphs: [
       'Dear compatriots,',
       'We, a diverse group of political activists, students, and graduates residing in Italy, in view of the grave and historic conditions of our homeland, have decided to establish the “Lion and Sun Front Italy” in order to take a major step toward organizing the activities of the Iranian diaspora in Italy; and hereby announce the beginning of this front’s activities.',
       'The social and political developments in Iran in recent years have shown that the role of national, aware, and responsible forces, especially the younger generation, has been and will remain decisive in shaping the future course of the country. Under such circumstances, the need for a coherent platform for collective reflection and effective action is felt more strongly than ever.',
       'With emphasis on the historic role and leadership of Crown Prince Reza Pahlavi, we will strive to bring together concerned Iranians in Italy under the broad umbrella of this organization and to play an effective role in advancing the freedom-seeking demands of the Iranian nation in this country.',
-      'The activities of the “Lion and Sun Front Italy,” which declares its establishment simultaneously with Nowruz 2585 of the Imperial calendar and the birth anniversary of Asho Zartosht, the herald of Iranian identity and مهر, are founded on the four inviolable principles announced by Crown Prince Reza Pahlavi. This front also considers itself part of the framework of national cooperation and a supporter of the “Transition Platform.”',
+      'The activities of the “Lion and Sun Front Italy,” which declares its establishment simultaneously with Nowruz 2585 of the Imperial calendar and the birth anniversary of Asho Zartosht, the herald of Iranian identity and affection, are founded on the four inviolable principles announced by Crown Prince Reza Pahlavi. This front also considers itself part of the framework of national cooperation and a supporter of the “Transition Platform.”',
       'We regard ourselves as committed to the fundamental principles of nationalism, democratic action, transparency, and dialogue; and we emphasize honesty, accountability, meritocracy, and the rejection of all forms of discrimination and monopolistic behavior.',
       'In conclusion, we sincerely invite all Iranians residing in Italy — from activists and students to researchers and interested young people — to join the Lion and Sun Front and stand with us in building a future for our beloved Iran based on freedom, progress, and collective will.',
       'We hope this will be our last effort to organize national forces in exile, and that the liberation of our homeland will pave the way for the return of all exiled Iranians to their motherland.'
@@ -77,6 +77,7 @@ const content = {
     closingA: 'Long live Iran',
     closingB: 'Javid Shah',
     foundersTitle: 'Founders of the Lion and Sun Front Italy',
+    foundersNote: 'Names listed in alphabetical order',
     founders: [
       'Amirsalar Khosravi',
       'André M. Rahbar',
@@ -94,8 +95,9 @@ const content = {
       'Zohreh Pakzad'
     ],
     contactTitle: 'Contact',
-    contactText: 'For media inquiries, collaboration, membership, and updates, reach us through the channels below.',
-    footer: '© 2026 Lion and Sun Front Italy'
+    contactText: 'For media inquiries, collaboration, and membership, connect with us here.',
+    footer: '© 2026 Lion and Sun Front Italy',
+    langLabel: 'English'
   }
 }
 
@@ -126,19 +128,11 @@ function XIcon() {
   )
 }
 
-function GlobeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="icon-svg">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18M12 3c2.7 2.5 4.2 5.76 4.2 9S14.7 18.5 12 21M12 3C9.3 5.5 7.8 8.76 7.8 12S9.3 18.5 12 21" />
-    </svg>
-  )
-}
-
 function App() {
   const [lang, setLang] = useState('fa')
   const [menuOpen, setMenuOpen] = useState(false)
   const langRef = useRef(null)
+  const headerRef = useRef(null)
   const t = content[lang]
 
   useEffect(() => {
@@ -162,36 +156,45 @@ function App() {
     setMenuOpen(false)
   }
 
+  const scrollToSection = (id) => {
+    const target = document.getElementById(id)
+    if (!target) return
+    const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+
+  const handleNavClick = (event, id) => {
+    event.preventDefault()
+    scrollToSection(id)
+  }
+
   return (
     <div className={`site-root ${lang === 'fa' ? 'rtl' : 'ltr'}`}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Estedad:wght@400;500;600;700;800;900&display=swap');
 
         :root {
           color-scheme: light;
-          --bg-1: #07111f;
-          --bg-2: #0c1b33;
+          --bg-1: #08121f;
+          --bg-2: #0d1c32;
           --bg-3: #edf3fb;
-          --surface: rgba(255, 255, 255, 0.72);
-          --surface-strong: rgba(255, 255, 255, 0.92);
-          --surface-dark: rgba(7, 17, 31, 0.72);
-          --border: rgba(148, 163, 184, 0.18);
-          --border-strong: rgba(255, 255, 255, 0.22);
+          --surface: rgba(255, 255, 255, 0.78);
+          --surface-strong: rgba(255, 255, 255, 0.94);
+          --border: rgba(148, 163, 184, 0.16);
           --text: #0f172a;
           --muted: #475569;
           --muted-2: #64748b;
           --navy: #08172d;
           --navy-2: #0f2d56;
-          --gold: #d3a84d;
-          --gold-2: #f2df9b;
-          --shadow-xl: 0 28px 80px rgba(2, 12, 27, 0.18);
-          --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.12);
-          --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+          --gold: #c79a37;
+          --shadow-xl: 0 30px 80px rgba(2, 12, 27, 0.16);
+          --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.10);
+          --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
           --radius-xl: 34px;
           --radius-lg: 24px;
           --radius-md: 18px;
           --container: 1280px;
-          --header-h: 112px;
         }
 
         * { box-sizing: border-box; }
@@ -201,14 +204,19 @@ function App() {
         body {
           margin: 0;
           background:
-            radial-gradient(circle at top left, rgba(213, 168, 77, 0.10), transparent 30%),
-            radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 26%),
-            linear-gradient(180deg, #f7f9fd 0%, #eef4fb 42%, #e9f0f8 100%);
+            radial-gradient(circle at top left, rgba(199, 154, 55, 0.08), transparent 26%),
+            radial-gradient(circle at top right, rgba(37, 99, 235, 0.06), transparent 22%),
+            linear-gradient(180deg, #f8fbff 0%, #eef4fb 40%, #e8eff8 100%);
         }
 
-        a { color: inherit; text-decoration: none; }
-        button, input, textarea, select { font: inherit; }
-        section[id] { scroll-margin-top: calc(var(--header-h) + 26px); }
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        button, input, textarea, select {
+          font: inherit;
+        }
 
         .site-root {
           min-height: 100vh;
@@ -224,27 +232,26 @@ function App() {
         .site-root::after {
           content: "";
           position: fixed;
-          inset: auto;
           pointer-events: none;
           z-index: 0;
-          filter: blur(70px);
-          opacity: 0.5;
+          filter: blur(72px);
+          opacity: 0.46;
         }
 
         .site-root::before {
-          width: 340px;
-          height: 340px;
-          top: -40px;
-          left: -60px;
-          background: rgba(211, 168, 77, 0.16);
+          width: 320px;
+          height: 320px;
+          top: -60px;
+          left: -70px;
+          background: rgba(199, 154, 55, 0.13);
         }
 
         .site-root::after {
           width: 360px;
           height: 360px;
-          right: -80px;
           top: 180px;
-          background: rgba(37, 99, 235, 0.10);
+          right: -90px;
+          background: rgba(59, 130, 246, 0.10);
         }
 
         .site-root.rtl,
@@ -262,8 +269,9 @@ function App() {
         .site-root.rtl .brand-top,
         .site-root.rtl .founder-name,
         .site-root.rtl .section-kicker,
-        .site-root.rtl .founders-grid-title {
-          font-family: Vazirmatn, Tahoma, sans-serif;
+        .site-root.rtl .founders-grid-title,
+        .site-root.rtl .founders-note {
+          font-family: Estedad, Tahoma, sans-serif;
         }
 
         .page-layer {
@@ -279,15 +287,25 @@ function App() {
         .topbar {
           position: sticky;
           top: 0;
-          z-index: 80;
-          background: rgba(255, 255, 255, 0.68);
-          backdrop-filter: blur(20px) saturate(180%);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.46);
-          box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+          z-index: 90;
+          background: rgba(255, 255, 255, 0.74);
+          backdrop-filter: blur(18px) saturate(180%);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+          box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+        }
+
+        .topbar::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(199, 154, 55, 0.55), transparent);
         }
 
         .topbar-inner {
-          min-height: var(--header-h);
+          min-height: 110px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -302,31 +320,15 @@ function App() {
           min-width: 0;
         }
 
-        .brand-logo-shell {
-          position: relative;
-          flex: 0 0 auto;
-        }
-
-        .brand-logo-shell::before {
-          content: "";
-          position: absolute;
-          inset: -10px;
-          border-radius: 38px;
-          background:
-            linear-gradient(135deg, rgba(242, 223, 155, 0.65), rgba(211, 168, 77, 0.18)),
-            rgba(255, 255, 255, 0.5);
-          filter: blur(0.5px);
-        }
-
         .brand-logo {
-          position: relative;
-          width: 122px;
-          height: 122px;
+          width: 136px;
+          height: 136px;
           border-radius: 30px;
           overflow: hidden;
-          background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.96));
-          box-shadow: 0 22px 44px rgba(15,23,42,0.14);
-          border: 1px solid rgba(255,255,255,0.72);
+          background: rgba(255,255,255,0.96);
+          box-shadow: 0 20px 42px rgba(15,23,42,0.12);
+          border: 1px solid rgba(255,255,255,0.88);
+          flex: 0 0 auto;
         }
 
         .brand-logo img {
@@ -342,8 +344,8 @@ function App() {
 
         .brand-top {
           margin: 0 0 8px;
-          font-size: 12px;
-          letter-spacing: 0.26em;
+          font-size: 11px;
+          letter-spacing: 0.25em;
           text-transform: uppercase;
           font-weight: 900;
           color: #64748b;
@@ -352,11 +354,11 @@ function App() {
 
         .brand-title {
           margin: 0;
-          font-size: clamp(32px, 3.15vw, 48px);
-          line-height: 1.02;
+          font-size: clamp(24px, 2.25vw, 34px);
+          line-height: 1.04;
           font-weight: 900;
           color: #071223;
-          text-wrap: balance;
+          white-space: nowrap;
         }
 
         .nav-group {
@@ -372,14 +374,13 @@ function App() {
           gap: 8px;
           padding: 8px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.58);
-          border: 1px solid rgba(255,255,255,0.66);
-          box-shadow: 0 12px 32px rgba(15,23,42,0.06);
+          background: rgba(255,255,255,0.62);
+          border: 1px solid rgba(255,255,255,0.74);
+          box-shadow: 0 10px 28px rgba(15,23,42,0.06);
           backdrop-filter: blur(14px);
         }
 
         .nav-link {
-          position: relative;
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -390,6 +391,7 @@ function App() {
           font-weight: 800;
           white-space: nowrap;
           transition: 180ms ease;
+          cursor: pointer;
         }
 
         .nav-link:hover {
@@ -402,14 +404,13 @@ function App() {
         }
 
         .lang-button {
-          border: 1px solid rgba(255,255,255,0.22);
-          background:
-            linear-gradient(135deg, #08172d 0%, #0f2d56 65%, #163f76 100%);
+          border: 1px solid rgba(255,255,255,0.26);
+          background: linear-gradient(135deg, #08172d 0%, #0f2d56 68%, #153d70 100%);
           color: #fff;
-          box-shadow: 0 18px 36px rgba(8, 23, 45, 0.24);
+          box-shadow: 0 16px 34px rgba(8, 23, 45, 0.22);
           border-radius: 999px;
           padding: 12px 17px;
-          min-width: 134px;
+          min-width: 136px;
           display: inline-flex;
           align-items: center;
           justify-content: space-between;
@@ -422,7 +423,7 @@ function App() {
 
         .lang-button:hover {
           transform: translateY(-1px);
-          box-shadow: 0 22px 44px rgba(8, 23, 45, 0.30);
+          box-shadow: 0 20px 40px rgba(8, 23, 45, 0.28);
         }
 
         .lang-caret {
@@ -448,9 +449,9 @@ function App() {
           min-width: 184px;
           padding: 10px;
           border-radius: 20px;
-          background: rgba(255,255,255,0.9);
-          border: 1px solid rgba(255,255,255,0.8);
-          box-shadow: 0 24px 50px rgba(15,23,42,0.16);
+          background: rgba(255,255,255,0.95);
+          border: 1px solid rgba(255,255,255,0.88);
+          box-shadow: 0 24px 50px rgba(15,23,42,0.14);
           backdrop-filter: blur(18px);
           opacity: 0;
           visibility: hidden;
@@ -459,8 +460,8 @@ function App() {
         }
 
         .ltr .lang-menu {
-          right: auto;
           left: 0;
+          right: auto;
         }
 
         .lang-menu.open {
@@ -480,12 +481,12 @@ function App() {
           font-weight: 800;
           cursor: pointer;
           color: #0f172a;
-          transition: background 180ms ease, color 180ms ease;
+          transition: background 180ms ease;
         }
 
         .lang-menu button:hover,
         .lang-menu button.active-lang {
-          background: rgba(15, 23, 42, 0.06);
+          background: rgba(15,23,42,0.06);
         }
 
         .hero {
@@ -500,12 +501,11 @@ function App() {
           isolation: isolate;
           box-shadow: var(--shadow-xl);
           background: #0b1a33;
-          border: 1px solid rgba(255,255,255,0.22);
+          border: 1px solid rgba(255,255,255,0.18);
         }
 
         .hero-image,
         .hero-overlay,
-        .hero-noise,
         .hero-glow {
           position: absolute;
           inset: 0;
@@ -522,29 +522,13 @@ function App() {
 
         .hero-overlay {
           background:
-            linear-gradient(90deg, rgba(5,15,32,0.10) 0%, rgba(5,15,32,0.42) 42%, rgba(5,15,32,0.88) 100%),
-            linear-gradient(180deg, rgba(7,17,31,0.12) 0%, rgba(7,17,31,0.72) 100%);
-        }
-
-        .rtl .hero-overlay {
-          background:
-            linear-gradient(270deg, rgba(5,15,32,0.10) 0%, rgba(5,15,32,0.42) 42%, rgba(5,15,32,0.88) 100%),
-            linear-gradient(180deg, rgba(7,17,31,0.12) 0%, rgba(7,17,31,0.72) 100%);
+            linear-gradient(180deg, rgba(5,15,32,0.06) 0%, rgba(5,15,32,0.14) 38%, rgba(5,15,32,0.44) 100%);
         }
 
         .hero-glow {
           background:
-            radial-gradient(circle at 18% 24%, rgba(242, 223, 155, 0.16), transparent 26%),
-            radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.12), transparent 24%);
-          mix-blend-mode: screen;
-        }
-
-        .hero-noise {
-          opacity: 0.22;
-          background-image:
-            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-          background-size: 22px 22px;
+            radial-gradient(circle at 78% 18%, rgba(255,255,255,0.12), transparent 20%),
+            radial-gradient(circle at 18% 30%, rgba(255,255,255,0.06), transparent 24%);
         }
 
         .hero-content {
@@ -553,17 +537,11 @@ function App() {
           min-height: 720px;
           display: flex;
           align-items: flex-end;
-          padding: 52px;
+          padding: 48px;
         }
 
         .hero-copy {
-          width: min(800px, 100%);
-          padding: 30px;
-          border-radius: 30px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
-          border: 1px solid rgba(255,255,255,0.14);
-          backdrop-filter: blur(14px);
-          box-shadow: 0 16px 50px rgba(0,0,0,0.14);
+          width: min(740px, 100%);
           text-align: left;
         }
 
@@ -576,16 +554,16 @@ function App() {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          padding: 12px 18px;
+          padding: 10px 16px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.14);
+          background: rgba(255,255,255,0.12);
           border: 1px solid rgba(255,255,255,0.16);
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(8px);
           color: #fff;
           font-size: 14px;
           font-weight: 900;
-          margin-bottom: 20px;
-          box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+          margin-bottom: 18px;
+          box-shadow: 0 8px 22px rgba(0,0,0,0.08);
         }
 
         .hero-badge::before {
@@ -593,14 +571,13 @@ function App() {
           width: 8px;
           height: 8px;
           border-radius: 999px;
-          background: linear-gradient(135deg, var(--gold-2), var(--gold));
-          box-shadow: 0 0 0 5px rgba(242, 223, 155, 0.10);
+          background: var(--gold);
         }
 
         .hero-title {
-          margin: 0 0 16px;
+          margin: 0 0 14px;
           color: #fff;
-          font-size: clamp(38px, 5vw, 72px);
+          font-size: clamp(36px, 4.6vw, 66px);
           line-height: 1.06;
           font-weight: 900;
           text-wrap: balance;
@@ -610,10 +587,11 @@ function App() {
         .hero-text {
           margin: 0;
           max-width: 680px;
-          color: rgba(255,255,255,0.88);
-          font-size: clamp(17px, 1.6vw, 21px);
+          color: rgba(255,255,255,0.9);
+          font-size: clamp(17px, 1.55vw, 21px);
           line-height: 1.9;
-          font-weight: 500;
+          font-weight: 600;
+          text-shadow: 0 4px 18px rgba(0,0,0,0.18);
         }
 
         .section {
@@ -631,6 +609,10 @@ function App() {
           text-align: right;
         }
 
+        .ltr .section-head {
+          text-align: left;
+        }
+
         .section-kicker {
           display: inline-flex;
           align-items: center;
@@ -646,17 +628,17 @@ function App() {
           content: "";
           width: 34px;
           height: 1px;
-          background: linear-gradient(90deg, rgba(211, 168, 77, 0.3), rgba(211, 168, 77, 1));
+          background: linear-gradient(90deg, rgba(199, 154, 55, 0.26), rgba(199, 154, 55, 1));
         }
 
         .rtl .section-kicker::before {
-          background: linear-gradient(270deg, rgba(211, 168, 77, 0.3), rgba(211, 168, 77, 1));
+          background: linear-gradient(270deg, rgba(199, 154, 55, 0.26), rgba(199, 154, 55, 1));
         }
 
         .glass-card {
           position: relative;
           background: var(--surface);
-          border: 1px solid rgba(255,255,255,0.48);
+          border: 1px solid rgba(255,255,255,0.52);
           backdrop-filter: blur(18px) saturate(180%);
           border-radius: var(--radius-xl);
           box-shadow: var(--shadow-lg);
@@ -668,8 +650,8 @@ function App() {
           position: absolute;
           inset: 0;
           background:
-            linear-gradient(180deg, rgba(255,255,255,0.16), transparent 24%),
-            radial-gradient(circle at top right, rgba(242, 223, 155, 0.12), transparent 24%);
+            linear-gradient(180deg, rgba(255,255,255,0.14), transparent 24%),
+            radial-gradient(circle at top right, rgba(199, 154, 55, 0.08), transparent 24%);
           pointer-events: none;
         }
 
@@ -691,12 +673,21 @@ function App() {
         .rtl .brand-copy,
         .rtl .contact-box,
         .rtl .contact-main,
-        .rtl .founders-grid-title {
+        .rtl .founders-grid-title,
+        .rtl .founders-note {
           text-align: right;
         }
 
+        .ltr .statement-title,
+        .ltr .statement-body,
+        .ltr .contact-box,
+        .ltr .contact-main,
+        .ltr .founders-grid-title,
+        .ltr .founders-note {
+          text-align: left;
+        }
+
         .statement-body {
-          position: relative;
           color: #334155;
           font-size: clamp(18px, 1.55vw, 22px);
           line-height: 2.08;
@@ -732,11 +723,19 @@ function App() {
         }
 
         .founders-grid-title {
-          margin: 0 0 22px;
+          margin: 0 0 8px;
           font-size: clamp(28px, 3.1vw, 40px);
           line-height: 1.18;
           font-weight: 900;
           color: #071223;
+        }
+
+        .founders-note {
+          margin: 0 0 22px;
+          color: #64748b;
+          font-size: 15px;
+          line-height: 1.9;
+          font-weight: 700;
         }
 
         .founders-grid {
@@ -746,32 +745,31 @@ function App() {
         }
 
         .founder-item {
-          position: relative;
           display: flex;
           align-items: center;
           gap: 14px;
           min-height: 78px;
           padding: 16px 18px;
           border-radius: 22px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(248,250,252,0.72));
-          border: 1px solid rgba(148,163,184,0.16);
+          background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(248,250,252,0.76));
+          border: 1px solid rgba(148,163,184,0.14);
           box-shadow: 0 12px 30px rgba(15,23,42,0.06);
           transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
         }
 
         .founder-item:hover {
           transform: translateY(-2px);
-          box-shadow: 0 18px 36px rgba(15,23,42,0.10);
-          border-color: rgba(211, 168, 77, 0.32);
+          box-shadow: 0 18px 36px rgba(15,23,42,0.09);
+          border-color: rgba(199, 154, 55, 0.30);
         }
 
         .founder-bullet {
-          width: 14px;
-          height: 14px;
+          width: 12px;
+          height: 12px;
           border-radius: 999px;
           flex: 0 0 auto;
-          background: radial-gradient(circle at 30% 30%, #fff6d9, #d3a84d 72%);
-          box-shadow: 0 0 0 6px rgba(211, 168, 77, 0.10);
+          background: radial-gradient(circle at 30% 30%, #fff4d2, #c79a37 72%);
+          box-shadow: 0 0 0 6px rgba(199, 154, 55, 0.08);
         }
 
         .founder-name {
@@ -806,7 +804,7 @@ function App() {
           position: absolute;
           inset: 0;
           background:
-            radial-gradient(circle at top right, rgba(242, 223, 155, 0.18), transparent 24%),
+            radial-gradient(circle at top right, rgba(199, 154, 55, 0.18), transparent 24%),
             radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 28%);
           pointer-events: none;
         }
@@ -834,7 +832,7 @@ function App() {
 
         .contact-text {
           margin: 0;
-          color: rgba(255,255,255,0.78);
+          color: rgba(255,255,255,0.80);
           font-size: 16px;
           line-height: 1.9;
           font-weight: 500;
@@ -859,7 +857,7 @@ function App() {
           padding: 12px 16px;
           min-height: 66px;
           border-radius: 999px;
-          border: 1px solid rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.12);
           background: rgba(255,255,255,0.10);
           box-shadow: 0 10px 24px rgba(0,0,0,0.10);
           backdrop-filter: blur(12px);
@@ -870,7 +868,7 @@ function App() {
           transform: translateY(-2px);
           box-shadow: 0 18px 34px rgba(0,0,0,0.18);
           background: rgba(255,255,255,0.14);
-          border-color: rgba(255,255,255,0.20);
+          border-color: rgba(255,255,255,0.22);
         }
 
         .contact-pill-label {
@@ -891,10 +889,20 @@ function App() {
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
         }
 
-        .icon-mail { background: linear-gradient(135deg, #eef2ff, #dbeafe); color: #1e3a8a; }
-        .icon-insta { background: linear-gradient(135deg, #fdf497 0%, #fd5949 35%, #d6249f 65%, #285AEB 100%); color: #ffffff; }
-        .icon-x { background: #0f172a; color: #ffffff; }
-        .icon-web { background: linear-gradient(135deg, #ecfeff, #cffafe); color: #155e75; }
+        .icon-mail {
+          background: linear-gradient(135deg, #eef2ff, #dbeafe);
+          color: #1e3a8a;
+        }
+
+        .icon-insta {
+          background: linear-gradient(135deg, #fdf497 0%, #fd5949 35%, #d6249f 65%, #285AEB 100%);
+          color: #ffffff;
+        }
+
+        .icon-x {
+          background: #0f172a;
+          color: #ffffff;
+        }
 
         .icon-svg {
           width: 22px;
@@ -906,8 +914,13 @@ function App() {
           stroke-linejoin: round;
         }
 
-        .icon-fill { fill: currentColor; }
-        .x-icon-fixed { stroke: none; }
+        .icon-fill {
+          fill: currentColor;
+        }
+
+        .x-icon-fixed {
+          stroke: none;
+        }
 
         .footer {
           padding: 10px 0 34px;
@@ -939,11 +952,8 @@ function App() {
         }
 
         @media (max-width: 980px) {
-          :root {
-            --header-h: 164px;
-          }
-
           .topbar-inner {
+            min-height: 140px;
             flex-direction: column;
             align-items: stretch;
             gap: 14px;
@@ -960,12 +970,13 @@ function App() {
           }
 
           .brand-logo {
-            width: 104px;
-            height: 104px;
+            width: 116px;
+            height: 116px;
           }
 
           .brand-title {
-            font-size: 28px;
+            font-size: 26px;
+            white-space: normal;
           }
 
           .nav-links {
@@ -979,10 +990,6 @@ function App() {
 
           .hero-content {
             padding: 24px;
-          }
-
-          .hero-copy {
-            padding: 22px;
           }
 
           .hero-title {
@@ -1000,15 +1007,12 @@ function App() {
         }
 
         @media (max-width: 760px) {
-          :root {
-            --header-h: 186px;
-          }
-
           .container {
             width: min(var(--container), calc(100% - 20px));
           }
 
           .topbar-inner {
+            min-height: 168px;
             padding: 10px 0 12px;
           }
 
@@ -1018,8 +1022,8 @@ function App() {
           }
 
           .brand-logo {
-            width: 90px;
-            height: 90px;
+            width: 94px;
+            height: 94px;
             border-radius: 24px;
           }
 
@@ -1029,7 +1033,8 @@ function App() {
           }
 
           .brand-title {
-            font-size: 24px;
+            font-size: 22px;
+            white-space: normal;
           }
 
           .nav-group {
@@ -1078,12 +1083,6 @@ function App() {
           .hero-content {
             padding: 18px;
             align-items: flex-end;
-          }
-
-          .hero-copy {
-            width: 100%;
-            border-radius: 24px;
-            padding: 18px;
           }
 
           .hero-title {
@@ -1138,27 +1137,25 @@ function App() {
       `}</style>
 
       <div className="page-layer">
-        <header className="topbar">
+        <header className="topbar" ref={headerRef}>
           <div className="container topbar-inner">
             <div className="brand-wrap">
-              <div className="brand-logo-shell">
-                <div className="brand-logo">
-                  <img src={logo} alt={t.brand} />
-                </div>
+              <div className="brand-logo">
+                <img src={logo} alt={t.brand} />
               </div>
 
               <div className="brand-copy">
-                <p className="brand-top">{t.brandTop}</p>
+                {t.brandTop ? <p className="brand-top">{t.brandTop}</p> : null}
                 <h1 className="brand-title">{t.brand}</h1>
               </div>
             </div>
 
             <div className="nav-group">
               <nav className="nav-links" aria-label="Main navigation">
-                <a className="nav-link" href="#home">{t.navHome}</a>
-                <a className="nav-link" href="#statement">{t.navStatement}</a>
-                <a className="nav-link" href="#founders">{t.navFounders}</a>
-                <a className="nav-link" href="#contact">{t.navContact}</a>
+                <a className="nav-link" href="#home" onClick={(e) => handleNavClick(e, 'home')}>{t.navHome}</a>
+                <a className="nav-link" href="#statement" onClick={(e) => handleNavClick(e, 'statement')}>{t.navStatement}</a>
+                <a className="nav-link" href="#founders" onClick={(e) => handleNavClick(e, 'founders')}>{t.navFounders}</a>
+                <a className="nav-link" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>{t.navContact}</a>
               </nav>
 
               <div className="lang-dropdown" ref={langRef}>
@@ -1168,7 +1165,7 @@ function App() {
                   aria-expanded={menuOpen}
                   onClick={() => setMenuOpen((prev) => !prev)}
                 >
-                  <span>{lang === 'fa' ? 'فارسی' : 'English'}</span>
+                  <span>{t.langLabel}</span>
                   <span className="lang-caret" />
                 </button>
 
@@ -1202,7 +1199,6 @@ function App() {
                 </div>
                 <div className="hero-overlay" />
                 <div className="hero-glow" />
-                <div className="hero-noise" />
 
                 <div className="hero-content">
                   <div className="hero-copy">
@@ -1246,6 +1242,7 @@ function App() {
 
               <div className="glass-card founders-card">
                 <h3 className="founders-grid-title">{t.foundersTitle}</h3>
+                <p className="founders-note">{t.foundersNote}</p>
 
                 <div className="founders-grid">
                   {t.founders.map((name) => (
@@ -1283,11 +1280,6 @@ function App() {
                   <a className="contact-pill" href="https://x.com/shirokhorshidit" target="_blank" rel="noreferrer" aria-label="X">
                     <span className="contact-pill-label">X</span>
                     <span className="contact-icon-wrap icon-x"><XIcon /></span>
-                  </a>
-
-                  <a className="contact-pill" href="https://shirokhorshid.it" target="_blank" rel="noreferrer" aria-label="Website">
-                    <span className="contact-pill-label">Website</span>
-                    <span className="contact-icon-wrap icon-web"><GlobeIcon /></span>
                   </a>
                 </div>
               </div>
