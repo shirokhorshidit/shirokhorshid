@@ -569,15 +569,9 @@ function App() {
         }
 
         .hero-copy {
-          width: min(760px, 100%);
-          text-align: left;
-          padding: 24px 28px;
-          border-radius: 28px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
-          border: 1px solid rgba(255,255,255,0.14);
-          backdrop-filter: blur(6px);
-          box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-          animation: floatCard 5.2s ease-in-out infinite;
+          background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+          border: 1px solid rgba(255,255,255,0.10);
+          backdrop-filter: blur(4px);
         }
 
         .rtl .hero-copy {
