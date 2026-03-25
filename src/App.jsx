@@ -3,6 +3,10 @@ import logo from './assets/logo.png'
 import header from './assets/header.jpg'
 import xlogo from './assets/xlogo.png'
 
+const statementRef = useRef(null)
+const foundersRef = useRef(null)
+const contactRef = useRef(null)
+
 const content = {
   fa: {
     dir: 'rtl',
@@ -181,13 +185,20 @@ function App() {
   }
 
   const scrollToSection = (id) => {
-    const target = document.getElementById(id)
-    if (!target) return
-
     const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0
-    const targetTop = window.scrollY + target.getBoundingClientRect().top
-    const top = targetTop - headerHeight
-
+  
+    const targetMap = {
+      home: document.getElementById('home'),
+      statement: statementRef.current,
+      founders: foundersRef.current,
+      contact: contactRef.current
+    }
+  
+    const target = targetMap[id]
+    if (!target) return
+  
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight
+  
     window.scrollTo({
       top,
       behavior: 'smooth'
@@ -518,22 +529,6 @@ function App() {
         .lang-menu button:hover,
         .lang-menu button.active-lang {
           background: rgba(15,23,42,0.06);
-        }
-
-        .hero {
-          padding: 24px 0 22px;
-          scroll-margin-top: 130px;
-        }
-
-        .section {
-          padding: 20px 0;
-          scroll-margin-top: 130px;
-        }
-
-        .contact-section {
-          padding-top: 20px;
-          padding-bottom: 32px;
-          scroll-margin-top: 130px;
         }
 
         .hero-shell {
@@ -1301,7 +1296,7 @@ function App() {
               </div>
 
               <div className="glass-card statement-card">
-                <h3 className="statement-title">{t.statementTitle}</h3>
+                <h3 ref={statementRef} className="statement-title">{t.statementTitle}</h3>
 
                 <div className="statement-body">
                   {t.paragraphs.map((paragraph) => (
@@ -1324,7 +1319,7 @@ function App() {
               </div>
 
               <div className="glass-card founders-card">
-                <h3 className="founders-grid-title">{t.foundersTitle}</h3>
+                <h3 ref={foundersRef} className="founders-grid-title">{t.foundersTitle}</h3>
                 <p className="founders-note">{t.foundersNote}</p>
 
                 <div className="founders-grid">
@@ -1344,7 +1339,7 @@ function App() {
               <div className="contact-box">
                 <div className="contact-main">
                   <div>
-                    <h3 className="contact-title">{t.contactTitle}</h3>
+                    <h3 ref={contactRef} className="contact-title">{t.contactTitle}</h3>
                     <p className="contact-text">{t.contactText}</p>
                   </div>
                 </div>
