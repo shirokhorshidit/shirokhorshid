@@ -196,7 +196,7 @@ function App() {
     const target = targetMap[id]
     if (!target) return
   
-    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight + 100
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight + 80
   
     window.scrollTo({
       top,
@@ -1205,6 +1205,15 @@ function App() {
             font-size: 16px;
           }
         }
+         
+          .section {
+            margin-top: 70px;
+          }
+          
+          .contact-section {
+            margin-top: 70px;
+          }
+        
       `}</style>
 
       <div className="page-layer">
