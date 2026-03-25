@@ -55,7 +55,7 @@ const content = {
   en: {
     dir: 'ltr',
     htmlLang: 'en',
-    brandTop: 'LION AND SUN FRONT ITALY',
+    brandTop: '',
     brand: 'Lion and Sun Front Italy',
     navHome: 'Home',
     navStatement: 'Statement',
@@ -166,8 +166,8 @@ function App() {
       },
       {
         root: null,
-        rootMargin: '-20% 0px -55% 0px',
-        threshold: [0.15, 0.3, 0.5, 0.7]
+        rootMargin: '-120px 0px -70% 0px',
+        threshold: [0.1, 0.2, 0.35, 0.5]
       }
     )
 
@@ -184,7 +184,8 @@ function App() {
     const target = document.getElementById(id)
     if (!target) return
     const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0
-    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight
+    const extraOffset = 8
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight - extraOffset
     window.scrollTo({ top, behavior: 'smooth' })
   }
 
@@ -200,26 +201,13 @@ function App() {
 
         :root {
           color-scheme: light;
-          --bg-1: #08121f;
-          --bg-2: #0d1c32;
-          --bg-3: #edf3fb;
-          --surface: rgba(255, 255, 255, 0.80);
-          --surface-strong: rgba(255, 255, 255, 0.94);
-          --border: rgba(148, 163, 184, 0.16);
+          --surface: rgba(255, 255, 255, 0.8);
           --text: #0f172a;
           --muted: #475569;
           --muted-2: #64748b;
-          --navy: #08172d;
-          --navy-2: #0f2d56;
-          --navy-3: #163f76;
           --gold: #c79a37;
-          --gold-2: #e8c56e;
           --shadow-xl: 0 30px 80px rgba(2, 12, 27, 0.16);
-          --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.10);
-          --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
-          --radius-xl: 34px;
-          --radius-lg: 24px;
-          --radius-md: 18px;
+          --shadow-lg: 0 18px 50px rgba(15, 23, 42, 0.1);
           --container: 1280px;
         }
 
@@ -277,7 +265,7 @@ function App() {
           height: 360px;
           top: 180px;
           right: -90px;
-          background: rgba(59, 130, 246, 0.10);
+          background: rgba(59, 130, 246, 0.1);
         }
 
         .site-root.rtl,
@@ -348,18 +336,12 @@ function App() {
         }
 
         .brand-logo {
-          width: 152px;
-          height: 152px;
-          border-radius: 30px;
-          overflow: hidden;
-          background: rgba(255,255,255,0.98);
-          box-shadow: 0 20px 42px rgba(15,23,42,0.12);
-          border: 1px solid rgba(255,255,255,0.88);
+          width: 158px;
+          height: 158px;
           flex: 0 0 auto;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 8px;
         }
 
         .brand-logo img {
@@ -389,7 +371,7 @@ function App() {
 
         .brand-title {
           margin: 0;
-          font-size: clamp(20px, 1.85vw, 28px);
+          font-size: clamp(20px, 1.8vw, 28px);
           line-height: 1.06;
           font-weight: 900;
           color: #071223;
@@ -443,6 +425,7 @@ function App() {
 
         .lang-dropdown {
           position: relative;
+          min-width: 132px;
         }
 
         .lang-button {
@@ -452,7 +435,7 @@ function App() {
           box-shadow: 0 16px 34px rgba(8, 23, 45, 0.22);
           border-radius: 18px;
           padding: 12px 16px;
-          min-width: 132px;
+          width: 132px;
           height: 52px;
           display: inline-flex;
           align-items: center;
@@ -489,10 +472,10 @@ function App() {
         .lang-menu {
           position: absolute;
           top: calc(100% + 10px);
+          left: 0;
           right: 0;
+          width: 100%;
           min-width: 100%;
-          width: max-content;
-          max-width: 220px;
           padding: 8px;
           border-radius: 18px;
           background: rgba(255,255,255,0.97);
@@ -504,11 +487,6 @@ function App() {
           transform: translateY(8px);
           transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
           overflow: hidden;
-        }
-
-        .ltr .lang-menu {
-          left: 0;
-          right: auto;
         }
 
         .lang-menu.open {
@@ -565,13 +543,13 @@ function App() {
           object-position: center;
           display: block;
           transform: scale(1.01);
-          opacity: 0.93;
+          opacity: 0.9;
           filter: saturate(1.02) contrast(1.01);
         }
 
         .hero-overlay {
           background:
-            linear-gradient(180deg, rgba(5,15,32,0.06) 0%, rgba(5,15,32,0.14) 38%, rgba(5,15,32,0.42) 100%);
+            linear-gradient(180deg, rgba(5,15,32,0.04) 0%, rgba(5,15,32,0.1) 38%, rgba(5,15,32,0.34) 100%);
         }
 
         .hero-glow {
@@ -594,10 +572,10 @@ function App() {
           text-align: left;
           padding: 24px 28px;
           border-radius: 28px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
-          border: 1px solid rgba(255,255,255,0.22);
-          backdrop-filter: blur(10px);
-          box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+          background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+          border: 1px solid rgba(255,255,255,0.14);
+          backdrop-filter: blur(6px);
+          box-shadow: 0 18px 40px rgba(0,0,0,0.08);
           animation: floatCard 5.2s ease-in-out infinite;
         }
 
@@ -612,14 +590,14 @@ function App() {
           gap: 10px;
           padding: 10px 16px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.14);
-          border: 1px solid rgba(255,255,255,0.18);
-          backdrop-filter: blur(8px);
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.14);
+          backdrop-filter: blur(6px);
           color: #fff;
           font-size: 14px;
           font-weight: 900;
           margin-bottom: 18px;
-          box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+          box-shadow: 0 8px 22px rgba(0,0,0,0.06);
         }
 
         .hero-badge::before {
@@ -638,17 +616,17 @@ function App() {
           line-height: 1.06;
           font-weight: 900;
           text-wrap: balance;
-          text-shadow: 0 8px 28px rgba(0,0,0,0.18);
+          text-shadow: 0 8px 28px rgba(0,0,0,0.16);
         }
 
         .hero-text {
           margin: 0;
           max-width: 680px;
-          color: rgba(255,255,255,0.92);
+          color: rgba(255,255,255,0.94);
           font-size: clamp(17px, 1.55vw, 21px);
           line-height: 1.9;
           font-weight: 600;
-          text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+          text-shadow: 0 4px 18px rgba(0,0,0,0.14);
         }
 
         .section {
@@ -697,7 +675,7 @@ function App() {
           background: var(--surface);
           border: 1px solid rgba(255,255,255,0.52);
           backdrop-filter: blur(18px) saturate(180%);
-          border-radius: var(--radius-xl);
+          border-radius: 34px;
           box-shadow: var(--shadow-lg);
           overflow: hidden;
         }
@@ -772,7 +750,7 @@ function App() {
         }
 
         .founders-section {
-          padding-top: 10px;
+          padding-top: 20px;
         }
 
         .founders-card {
@@ -817,7 +795,7 @@ function App() {
         .founder-item:hover {
           transform: translateY(-2px);
           box-shadow: 0 18px 36px rgba(15,23,42,0.09);
-          border-color: rgba(199, 154, 55, 0.30);
+          border-color: rgba(199, 154, 55, 0.3);
         }
 
         .founder-bullet {
@@ -837,7 +815,7 @@ function App() {
         }
 
         .contact-section {
-          padding-top: 14px;
+          padding-top: 20px;
           padding-bottom: 32px;
         }
 
@@ -851,7 +829,7 @@ function App() {
           border-radius: 34px;
           background:
             linear-gradient(135deg, rgba(8, 23, 45, 0.96) 0%, rgba(15, 45, 86, 0.94) 55%, rgba(19, 62, 112, 0.94) 100%);
-          border: 1px solid rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.1);
           box-shadow: 0 26px 60px rgba(8, 23, 45, 0.22);
           overflow: hidden;
         }
@@ -889,7 +867,7 @@ function App() {
 
         .contact-text {
           margin: 0;
-          color: rgba(255,255,255,0.80);
+          color: rgba(255,255,255,0.8);
           font-size: 16px;
           line-height: 1.9;
           font-weight: 500;
@@ -915,8 +893,8 @@ function App() {
           min-height: 66px;
           border-radius: 999px;
           border: 1px solid rgba(255,255,255,0.12);
-          background: rgba(255,255,255,0.10);
-          box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+          background: rgba(255,255,255,0.1);
+          box-shadow: 0 10px 24px rgba(0,0,0,0.1);
           backdrop-filter: blur(12px);
           transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
         }
@@ -943,7 +921,6 @@ function App() {
           align-items: center;
           justify-content: center;
           flex: 0 0 auto;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.14);
           overflow: hidden;
         }
 
@@ -955,11 +932,6 @@ function App() {
         .icon-insta {
           background: linear-gradient(135deg, #fdf497 0%, #fd5949 35%, #d6249f 65%, #285AEB 100%);
           color: #ffffff;
-        }
-
-        .icon-x {
-          background: #ffffff;
-          color: #111827;
         }
 
         .icon-svg {
@@ -977,10 +949,11 @@ function App() {
         }
 
         .x-logo-image {
-          width: 22px;
-          height: 22px;
+          width: 26px;
+          height: 26px;
           object-fit: contain;
           display: block;
+          border-radius: 8px;
         }
 
         .footer {
@@ -1103,12 +1076,6 @@ function App() {
           .brand-logo {
             width: 104px;
             height: 104px;
-            border-radius: 24px;
-          }
-
-          .brand-top {
-            font-size: 10px;
-            letter-spacing: 0.16em;
           }
 
           .brand-title {
@@ -1136,20 +1103,16 @@ function App() {
 
           .lang-dropdown {
             width: 100%;
+            min-width: 0;
           }
 
           .lang-button {
             width: 100%;
-            min-width: 0;
           }
 
-          .lang-menu,
-          .ltr .lang-menu {
-            left: 0;
-            right: 0;
+          .lang-menu {
             width: 100%;
-            max-width: none;
-            min-width: 0;
+            min-width: 100%;
           }
 
           .hero {
@@ -1367,7 +1330,7 @@ function App() {
 
                   <a className="contact-pill" href="https://x.com/shirokhorshidit" target="_blank" rel="noreferrer" aria-label="X">
                     <span className="contact-pill-label">X</span>
-                    <span className="contact-icon-wrap icon-x"><XIconImage /></span>
+                    <span className="contact-icon-wrap"><XIconImage /></span>
                   </a>
                 </div>
               </div>
