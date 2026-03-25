@@ -949,8 +949,8 @@ function App() {
         }
 
         .x-logo-image {
-          width: 26px;
-          height: 26px;
+          width: 40px;
+          height: 40px;
           object-fit: contain;
           display: block;
           border-radius: 8px;
