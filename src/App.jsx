@@ -196,7 +196,7 @@ function App() {
     const target = targetMap[id]
     if (!target) return
   
-    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight + 20
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight + 40
   
     window.scrollTo({
       top,
