@@ -1021,6 +1021,9 @@ function App() {
             height: 160px;
             border-radius: 50%;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
 
           .brand-title {
