@@ -573,7 +573,7 @@ function App() {
           text-align: left;
           padding: 24px 28px;
           border-radius: 28px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+          background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
           border: 1px solid rgba(255,255,255,0.14);
           backdrop-filter: blur(6px);
           box-shadow: 0 18px 40px rgba(0,0,0,0.08);
