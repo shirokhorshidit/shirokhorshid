@@ -205,14 +205,20 @@ function App() {
     const target = targetMap[id]
     if (!target) return
   
-    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight + 80
+    const mobileExtraOffset = window.innerWidth <= 760 ? 40 : 0
+  
+    const top =
+      window.scrollY +
+      target.getBoundingClientRect().top -
+      headerHeight +
+      80 +
+      mobileExtraOffset
   
     window.scrollTo({
       top,
       behavior: 'smooth'
     })
   }
-
   const handleNavClick = (event, id) => {
     event.preventDefault()
     scrollToSection(id)
