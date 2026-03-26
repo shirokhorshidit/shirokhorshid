@@ -48,7 +48,8 @@ const content = {
       'شیرین طاهری نسب',
       'فریبا کریمی',
       'متین خالدی',
-      'مریم پزشکی'
+      'مریم پزشکی',
+      'هانا نامداری'
     ],
     contactTitle: 'ارتباط با ما',
     contactText: 'برای ارتباط رسانه‌ای، همکاری و عضویت، از همین بخش با ما در تماس باشید.',
@@ -93,6 +94,7 @@ const content = {
       'Dara Kamyar',
       'Daryoush Nateghi',
       'Fariba Karimi',
+      'Hana Namdari',
       'Maryam Pezeshki',
       'Matin Khaledi',
       'Parniya Ghanati',
