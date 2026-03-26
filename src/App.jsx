@@ -44,7 +44,7 @@ const content = {
       'داریوش ناطقی',
       'زهره پاک زاد',
       'شاهین قدسی',
-      'شایان عباسیان',
+      'شایان عباسیان آزاد',
       'شیرین طاهری نسب',
       'فریبا کریمی',
       'متین خالدی',
@@ -99,7 +99,7 @@ const content = {
       'Matin Khaledi',
       'Parniya Ghanati',
       'Shahin Ghodsi',
-      'Shayan Abbasian',
+      'Shayan Abbasian Azad',
       'Shirin Taherinasab',
       'Tooska Jahandideh',
       'Zohreh Pakzad'
