@@ -205,7 +205,7 @@ function App() {
     const target = targetMap[id]
     if (!target) return
   
-    const mobileExtraOffset = window.innerWidth <= 760 ? 40 : 0
+    const mobileExtraOffset = window.innerWidth <= 760 ? 80 : 0
   
     const top =
       window.scrollY +
