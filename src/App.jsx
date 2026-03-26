@@ -211,7 +211,7 @@ function App() {
       window.scrollY +
       target.getBoundingClientRect().top -
       headerHeight +
-      80 +
+      60 +
       mobileExtraOffset
   
     window.scrollTo({
@@ -219,6 +219,7 @@ function App() {
       behavior: 'smooth'
     })
   }
+  
   const handleNavClick = (event, id) => {
     event.preventDefault()
     scrollToSection(id)
