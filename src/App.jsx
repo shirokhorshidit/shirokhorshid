@@ -11,7 +11,6 @@ const content = {
     brand: 'جبهه شیر و خورشید ایتالیا',
     navHome: 'صفحه اصلی',
     navStatement: 'بیانیه',
-    navFounders: 'بنیان‌گذاران',
     navContact: 'ارتباط',
     heroBadge: 'بیانیه اعلام موجودیت',
     heroTitle: 'آغاز فعالیت جبهه شیر و خورشید ایتالیا',
@@ -29,27 +28,6 @@ const content = {
     ],
     closingA: 'پاینده ایران',
     closingB: 'جاوید شاه',
-    foundersTitle: 'بنیان‌گذاران جبهه شیر و خورشید ایتالیا',
-    founders: [
-      'الهه توکلیان',
-      'آریا آذرمهر',
-      'آسیا رئوفی',
-      'آندره ماری رهبر',
-      'آیسان احمدی',
-      'امیرسالار خسروی',
-      'بهنام صفایی',
-      'پرنیا قناتی',
-      'توسکا جهاندیده',
-      'دارا کامیار',
-      'داریوش ناطقی',
-      'زهره پاک زاد',
-      'شاهین قدسی',
-      'شایان عباسیان آزاد',
-      'شیرین طاهری نسب',
-      'فریبا کریمی',
-      'متین خالدی',
-      'مریم پزشکی'
-    ],
     contactTitle: 'ارتباط با ما',
     contactText: 'برای ارتباط رسانه‌ای، همکاری و عضویت، از همین بخش با ما در تماس باشید.',
     footer: '© 2026 جبهه شیر و خورشید ایتالیا',
@@ -62,7 +40,6 @@ const content = {
     brand: 'Lion and Sun Front Italy',
     navHome: 'Home',
     navStatement: 'Statement',
-    navFounders: 'Founders',
     navContact: 'Contact',
     heroBadge: 'Founding Statement',
     heroTitle: 'Launch of the Lion and Sun Front Italy',
@@ -80,28 +57,6 @@ const content = {
     ],
     closingA: 'Long live Iran',
     closingB: 'Javid Shah',
-    foundersTitle: 'Founders of the Lion and Sun Front Italy',
-    foundersNote: 'Alphabetical order',
-    founders: [
-      'Elaheh Tavakoliyan',
-      'Amirsalar Khosravi',
-      'André M. Rahbar',
-      'Ariya Azarmehr',
-      'Asia Raoufi',
-      'Aysan Ahmadi',
-      'Behnam Safayi',
-      'Dara Kamyar',
-      'Daryoush Nateghi',
-      'Fariba Karimi',
-      'Maryam Pezeshki',
-      'Matin Khaledi',
-      'Parniya Ghanati',
-      'Shahin Ghodsi',
-      'Shayan Abbasian Azad',
-      'Shirin Taherinasab',
-      'Tooska Jahandideh',
-      'Zohreh Pakzad'
-    ],
     contactTitle: 'Contact',
     contactText: 'For media inquiries, collaboration, and membership, connect with us here.',
     footer: '© 2026 Lion and Sun Front Italy',
@@ -140,7 +95,6 @@ function App() {
   const headerRef = useRef(null)
   const t = content[lang]
   const statementRef = useRef(null)
-  const foundersRef = useRef(null)
   const contactRef = useRef(null)
 
   useEffect(() => {
@@ -160,7 +114,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const sections = ['home', 'statement', 'founders', 'contact']
+    const sections = ['home', 'statement', 'contact']
       .map((id) => document.getElementById(id))
       .filter(Boolean)
 
@@ -192,32 +146,31 @@ function App() {
 
   const scrollToSection = (id) => {
     const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0
-  
+
     const targetMap = {
       home: document.getElementById('home'),
       statement: statementRef.current,
-      founders: foundersRef.current,
       contact: contactRef.current
     }
-  
+
     const target = targetMap[id]
     if (!target) return
-  
+
     const mobileExtraOffset = window.innerWidth <= 760 ? 80 : 0
-  
+
     const top =
       window.scrollY +
       target.getBoundingClientRect().top -
       headerHeight +
       60 +
       mobileExtraOffset
-  
+
     window.scrollTo({
       top,
       behavior: 'smooth'
     })
   }
-  
+
   const handleNavClick = (event, id) => {
     event.preventDefault()
     scrollToSection(id)
@@ -310,10 +263,7 @@ function App() {
         .site-root.rtl .lang-menu button,
         .site-root.rtl .hero-badge,
         .site-root.rtl .brand-top,
-        .site-root.rtl .founder-name,
-        .site-root.rtl .section-kicker,
-        .site-root.rtl .founders-grid-title,
-        .site-root.rtl .founders-note {
+        .site-root.rtl .section-kicker {
           font-family: "Noto Naskh Arabic", Tahoma, serif;
         }
 
@@ -741,18 +691,14 @@ function App() {
         .rtl .statement-body,
         .rtl .brand-copy,
         .rtl .contact-box,
-        .rtl .contact-main,
-        .rtl .founders-grid-title,
-        .rtl .founders-note {
+        .rtl .contact-main {
           text-align: right;
         }
 
         .ltr .statement-title,
         .ltr .statement-body,
         .ltr .contact-box,
-        .ltr .contact-main,
-        .ltr .founders-grid-title,
-        .ltr .founders-note {
+        .ltr .contact-main {
           text-align: left;
         }
 
@@ -781,71 +727,6 @@ function App() {
           color: #0f172a;
           font-weight: 900;
           font-size: clamp(18px, 1.45vw, 21px);
-        }
-
-        .founders-section {
-          padding-top: 20px;
-        }
-
-        .founders-card {
-          padding: clamp(22px, 3vw, 40px);
-        }
-
-        .founders-grid-title {
-          margin: 0 0 8px;
-          font-size: clamp(28px, 3.1vw, 40px);
-          line-height: 1.18;
-          font-weight: 900;
-          color: #071223;
-        }
-
-        .founders-note {
-          margin: 0 0 22px;
-          color: #64748b;
-          font-size: 15px;
-          line-height: 1.9;
-          font-weight: 700;
-        }
-
-        .founders-grid {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 14px;
-        }
-
-        .founder-item {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          min-height: 78px;
-          padding: 16px 18px;
-          border-radius: 22px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(248,250,252,0.76));
-          border: 1px solid rgba(148,163,184,0.14);
-          box-shadow: 0 12px 30px rgba(15,23,42,0.06);
-          transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-        }
-
-        .founder-item:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 18px 36px rgba(15,23,42,0.09);
-          border-color: rgba(199, 154, 55, 0.3);
-        }
-
-        .founder-bullet {
-          width: 12px;
-          height: 12px;
-          border-radius: 999px;
-          flex: 0 0 auto;
-          background: radial-gradient(circle at 30% 30%, #fff4d2, #c79a37 72%);
-          box-shadow: 0 0 0 6px rgba(199, 154, 55, 0.08);
-        }
-
-        .founder-name {
-          font-size: clamp(16px, 1.3vw, 20px);
-          line-height: 1.6;
-          font-weight: 800;
-          color: #0f172a;
         }
 
         .contact-box {
@@ -1082,13 +963,8 @@ function App() {
             font-size: 40px;
           }
 
-          .statement-card,
-          .founders-card {
+          .statement-card {
             padding: 24px;
-          }
-
-          .founders-grid {
-            grid-template-columns: 1fr;
           }
         }
 
@@ -1099,10 +975,10 @@ function App() {
           .section {
             margin-top: 40px;
           }
-          
+
           .contact-section {
             margin-top: 40px;
-          }          
+          }
 
           .topbar-inner {
             min-height: 172px;
@@ -1192,7 +1068,6 @@ function App() {
           }
 
           .statement-title,
-          .founders-grid-title,
           .contact-title {
             font-size: 28px;
           }
@@ -1215,26 +1090,16 @@ function App() {
           .contact-pill-label {
             font-size: 14px;
           }
-
-          .founder-item {
-            min-height: 68px;
-            padding: 14px 16px;
-            border-radius: 18px;
-          }
-
-          .founder-name {
-            font-size: 16px;
-          }
         }
-         
-          .section {
-            margin-top: 70px;
-          }
-          
-          .contact-section {
-            margin-top: 70px;
-          }
-        
+
+        .section {
+          margin-top: 70px;
+        }
+
+        .contact-section {
+          margin-top: 70px;
+        }
+
       `}</style>
 
       <div className="page-layer">
@@ -1255,7 +1120,6 @@ function App() {
               <nav className="nav-links" aria-label="Main navigation">
                 <a className={`nav-link ${activeSection === 'home' ? 'active-nav' : ''}`} href="#home" onClick={(e) => handleNavClick(e, 'home')}>{t.navHome}</a>
                 <a className={`nav-link ${activeSection === 'statement' ? 'active-nav' : ''}`} href="#statement" onClick={(e) => handleNavClick(e, 'statement')}>{t.navStatement}</a>
-                <a className={`nav-link ${activeSection === 'founders' ? 'active-nav' : ''}`} href="#founders" onClick={(e) => handleNavClick(e, 'founders')}>{t.navFounders}</a>
                 <a className={`nav-link ${activeSection === 'contact' ? 'active-nav' : ''}`} href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>{t.navContact}</a>
               </nav>
 
@@ -1336,28 +1200,6 @@ function App() {
                     <div>{t.closingA}</div>
                     <div>{t.closingB}</div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="founders" className="section founders-section">
-            <div className="container">
-              <div className="section-head">
-                <span className="section-kicker">{t.navFounders}</span>
-              </div>
-
-              <div className="glass-card founders-card">
-                <h3 ref={foundersRef} className="founders-grid-title">{t.foundersTitle}</h3>
-                <p className="founders-note">{t.foundersNote}</p>
-
-                <div className="founders-grid">
-                  {t.founders.map((name) => (
-                    <div className="founder-item" key={name}>
-                      <span className="founder-bullet" />
-                      <div className="founder-name">{name}</div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
